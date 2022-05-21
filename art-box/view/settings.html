@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Mi cuenta</title>
+    <link rel="shortcut icon" href="./assets/icon-new.png" type="image/x-icon">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Icons FontAwesome 4.7.0 -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  type="text/css" />
+
+
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_menuicon" id="navicon">
+            <i class="fa fa-navicon"></i>
+        </div>
+        <div class="navbar_logo">
+            <img src="./assets/icon-new.png" alt="" />
+        </div>
+        <div class="navbar_user" id="profilemodal" style="cursor:pointer">
+            <img src="./assets/img.jpeg" alt="" />
+            <span id="navbar_user_top">Marcy<br><p>User</p></span><i class="fa fa-angle-down"></i>
+        </div>
+    </div>
+
+    <div class="all">
+
+        <div class="rowfixed"></div>
+        <div class="left_row">
+        </div>
+        <div class="right_row">
+
+            <div class="row border-radius">
+                <div class="settings shadow">
+                    <div class="settings_title">
+                        <h3>Account Settings</h3>
+                    </div>
+                    <div class="settings_content">
+                        <ul>
+                            <li>
+                                <p><b>Notifications Sound</b><br>A sound will be played each time you receive a new activity notification</p>
+                                <label class="switch"><input type="checkbox" class="primary"><span class="slider round"></span></label>
+                            </li>
+                            <li>
+                                <p><b>Notifications Email</b><br>We’ll send you an email to your account each time you receive a new activity notification</p>
+                                <label class="switch"><input type="checkbox" class="primary" checked><span class="slider round"></span></label>
+                            </li>
+                            <li>
+                                <p><b>Friend’s Birthdays</b><br>Choose wheather or not receive notifications about your friend’s birthdays on your newsfeed</p>
+                                <label class="switch"><input type="checkbox" class="primary" checked><span class="slider round"></span></label>
+                            </li>
+                            <li>
+                                <p><b>Chat Message Sound</b><br>A sound will be played each time you receive a new message on an inactive chat window</p>
+                                <label class="switch"><input type="checkbox" class="primary"><span class="slider round"></span></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

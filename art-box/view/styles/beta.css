@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.navigator{
+    background-image: url('../assets/local_img/bg.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.navigator .menu-btn{
+    width: 4rem;
+    position: relative;
+    position: absolute;
+    z-index: 100;
+    left: 94%;
+    top: 2rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 0px 80px 10px #000;
+}
+.navigator .menu-btn:active{
+    transform: scale(.9);
+}
+.navigator .nav-tool{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.navigator .active{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    opacity: .5;
+}
+.navigator .nav-tool li{
+    color: #fff;
+    list-style: none;
+    margin: 1rem 2rem;
+    cursor: pointer;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+.navigator .nav-tool li:hover{
+    color: lightgray;
+}
+.navigator .container{
+    position: relative;
+    top: 100px;
+    width: 200px;
+    left: 20px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.navigator .container h1{
+    color: #fff;
+    font-size: 100px;
+}
+.container .btn-galery{
+    padding: 15px;
+    position: relative;
+    top: 30px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+}
+.hidden-bigtext{
+    display: none;
+}
+.hidden-button{
+    display: none;
+}
+.hidden-span{
+    display: none;
+}
+main{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;    
+    margin: 20px;
+}
+main .card{
+    width: 400px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 4px 50px 3px lightgray;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+main .card .pay p{
+    color: gray;
+    top: 5px;
+    position: relative;
+    font-size: 15px;
+}
+main .card:hover{
+    transform: translateY(-10%);
+}
+main .card .pay{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+    bottom: 0;
+}
+main .card .pay h1{
+    color: #606060;
+}
+main .card .pay button{
+    padding: 10px;
+    width: 140px;
+    outline: none;
+    border: none;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 1px;
+}
+main .card .pay button:active{
+    transform: scale(.9);
+}
+main .card .pay button:hover{
+    background: lightgray;   
+}
+main .card img{
+    width: 100%;
+}
+
+/* flex */
+@media (max-width: 600px) {
+    .navigator{
+        overflow: hidden;
+    }
+    .navigator .menu-btn{
+        position: relative;
+        left: 80%;
+    }
+    .navigator .nav-tool{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    .navigator .nav-tool li{
+        font-size: 40px;
+    }
+    .navigator h1{
+        position: relative;
+        top: 50px;
+    }
+    .navigator span{
+        position: relative;
+        display: none;
+    }
+    .content-galery{
+        flex-direction: column;
+    }
+    .content-galery .card-image{
+        margin: 20px auto;
+        padding: 20px;
+        overflow: hidden;
+    }
+    .content-galery .card-image img{
+        width: 100%;
+    }
+    main .card .pay h1{
+        font-size: 25px;
+    }
+    main .card .pay p{
+        font-size: 15px;
+    }
+}
